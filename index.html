@@ -1,4 +1,122 @@
-</h1>	 meu blog  tech</h1>
-<p>vou compartilhar conhecimentos sobre tecnologia e programação </p>
+console.log("Bem-vindo ao projeto Futsal!");
 
-!DOCTYPE <html>
+futsal/
+├── index.html
+├── style.css
+├── script.js
+├── README.md
+└── images/
+    ├── logo.png
+    └── quadra.jpg
+
+    # Futsal
+
+Projeto de um site informativo sobre futsal.
+
+## Funcionalidades
+
+- História do futsal
+- Regras básicas
+- Posições dos jogadores
+- Galeria de imagens
+- Contato
+
+## Tecnologias
+
+- HTML5
+- CSS3
+- JavaScript
+
+## Como executar
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/futsal.git
+   ```
+2. Abra o arquivo `index.html` no navegador.
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futsal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Futsal</h1>
+        <nav>
+            <a href="#historia">História</a>
+            <a href="#regras">Regras</a>
+            <a href="#posicoes">Posições</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="historia">
+            <h2>História</h2>
+            <p>O futsal surgiu na América do Sul e tornou-se um dos esportes mais populares do mundo.</p>
+        </section>
+
+        <section id="regras">
+            <h2>Regras</h2>
+            <ul>
+                <li>5 jogadores por equipe.</li>
+                <li>Dois tempos de 20 minutos.</li>
+                <li>Substituições ilimitadas.</li>
+            </ul>
+        </section>
+
+        <section id="posicoes">
+            <h2>Posições</h2>
+            <p>Goleiro, Fixo, Alas e Pivô.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Projeto sobre Futsal © 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+}
+
+header {
+    background: #0b7a3e;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+main {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+section {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+footer {
+    background: #0b7a3e;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
