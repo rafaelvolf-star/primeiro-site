@@ -1,0 +1,52 @@
+
+from flask import Flask
+
+app = Flask(__name__)
+
+times = [
+    {"nome": "Leões", "pontos": 6},
+    {"nome": "Águias", "pontos": 4},
+    {"nome": "Tigres", "pontos": 1}
+]
+
+@app.route("/")
+def inicio():
+    return """
+    <h1>⚽ Futsal Manager</h1>
+    <p>Sistema simples para campeonato de futsal.</p>
+
+    <a href="/times">Ver Times</a><br>
+    <a href="/classificacao">Classificação</a>
+    """
+
+@app.route("/times")
+def listar_times():
+    texto = "<h2>Times</h2><ul>"
+
+    for time in times:
+        texto += f"<li>{time['nome']}</li>"
+
+    texto += "</ul>"
+    return texto
+
+@app.route("/classificacao")
+def classificacao():
+
+    tabela = sorted(times,
+                    key=lambda t: t["pontos"],
+                    reverse=True)
+
+    texto = "<h2>Classificação</h2><ol>"
+
+    for time in tabela:
+        texto += f"<li>{time['nome']} - {time['pontos']} pontos</li>"
+
+    texto += "</ol>"
+    return texto
+
+if __name__ == "__main__":
+    app.run(debug=True)
+
+    Flask
+pip install Flask
+python app.py
